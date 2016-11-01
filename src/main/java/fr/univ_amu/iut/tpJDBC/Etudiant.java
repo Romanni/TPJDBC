@@ -51,53 +51,53 @@ public class Etudiant implements Serializable {
         return numEt;
     }
 
-    public String getNomEt() {
-        return nomEt;
-    }
-
-    public String getPrenomEt() {
-        return prenomEt;
-    }
-
-    public String getCpEt() {
-        return cpEt;
-    }
-
-    public String getVilleEt() {
-        return villeEt;
-    }
-
-    public int getAnnee() {
-        return annee;
-    }
-
-    public int getGroupe() {
-        return groupe;
-    }
-
     public void setNumEt(int numEt) {
 
         this.numEt = numEt;
+    }
+
+    public String getNomEt() {
+        return nomEt;
     }
 
     public void setNomEt(String nomEt) {
         this.nomEt = nomEt;
     }
 
+    public String getPrenomEt() {
+        return prenomEt;
+    }
+
     public void setPrenomEt(String prenomEt) {
         this.prenomEt = prenomEt;
+    }
+
+    public String getCpEt() {
+        return cpEt;
     }
 
     public void setCpEt(String cpEt) {
         this.cpEt = cpEt;
     }
 
+    public String getVilleEt() {
+        return villeEt;
+    }
+
     public void setVilleEt(String villeEt) {
         this.villeEt = villeEt;
     }
 
+    public int getAnnee() {
+        return annee;
+    }
+
     public void setAnnee(int annee) {
         this.annee = annee;
+    }
+
+    public int getGroupe() {
+        return groupe;
     }
 
     public void setGroupe(int groupe) {

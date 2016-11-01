@@ -9,8 +9,6 @@ public class testEntite {
 
     public static void main(String[] args) throws SQLException {
 
-        ArrayList listEtu = new ArrayList();
-
         // Objet materialisant la connexion a la base de donnees
         try {
             Connection conn = ConnexionUnique.getInstance().getConnection();
@@ -22,7 +20,7 @@ public class testEntite {
             System.out.println("Execution de la requete : " + req );
             ResultSet rset = stmt.executeQuery(req);
 
-            ArrayList <Etudiant> listEtudiant = new ArrayList();
+            ArrayList <Etudiant> listEtu = new ArrayList();
 
             while (rset.next()){
 
@@ -37,10 +35,11 @@ public class testEntite {
                 etu.setGroupe(rset.getInt("GROUPE"));
 
                 // ajoute l'objet dans l'arraylist
-                listEtudiant.add(etu);
+                listEtu.add(etu);
             }
 
-            for (Etudiant etu : listEtudiant)
+            for (Etudiant etu : listEtu)
+                System.out.println(etu);
 
             // Fermeture de l'instruction (liberation des ressources)
             stmt.close();
