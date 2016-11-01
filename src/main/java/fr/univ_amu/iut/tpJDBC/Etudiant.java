@@ -44,7 +44,7 @@ public class Etudiant implements Serializable {
 
     @Override
     public String toString() {
-        return "Etudiant{" + "numEt=" + numEt + ", nomEt='" + nomEt + '\'' + ", prenomEt='" + prenomEt + '\'' + ", cpEt='" + cpEt + '\'' + ", villeEt='" + villeEt + '\'' + ", annee=" + annee + ", groupe=" + groupe + '}';
+        return "Etudiant : " + "numEt=" + numEt + ", nomEt='" + nomEt + '\'' + ", prenomEt='" + prenomEt + '\'' + ", cpEt='" + cpEt + '\'' + ", villeEt='" + villeEt + '\'' + ", annee=" + annee + ", groupe=" + groupe + '}';
     }
 
     public int getNumEt() {

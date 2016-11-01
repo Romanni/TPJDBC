@@ -7,4 +7,5 @@ public class Prof {
     private String adrProf;
     private String cpProf;
     private String villeProf;
+    private Module specialite;
 }

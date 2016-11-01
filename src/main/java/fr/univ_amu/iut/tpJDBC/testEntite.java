@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 public class testEntite {
     // La requete de test
-    static final String req = "SELECT *" + "FROM ETUDIANT ";
+    static final String req = "SELECT NUM_ET, NOM_ET, PRENOM_ET, CP_ET, VILLE_ET, ANNEE, GROUPE " + "FROM ETUDIANT";
 
     public static void main(String[] args) throws SQLException {
 
@@ -22,12 +22,25 @@ public class testEntite {
             System.out.println("Execution de la requete : " + req );
             ResultSet rset = stmt.executeQuery(req);
 
-            //stockage dans l'arraylist
-            Etudiant etu = new Etudiant();
-            listEtu.add(rset);
+            ArrayList <Etudiant> listEtudiant = new ArrayList();
 
-            // Affichage des étudiants
+            while (rset.next()){
 
+                // création et initialisation des données de l'objet étudiant
+                Etudiant etu = new Etudiant();
+                etu.setNumEt(rset.getInt("NUM_ET"));
+                etu.setNomEt(rset.getString("NOM_ET"));
+                etu.setPrenomEt(rset.getString("PRENOM_ET"));
+                etu.setCpEt(rset.getString("CP_ET"));
+                etu.setVilleEt(rset.getString("VILLE_ET"));
+                etu.setAnnee(rset.getInt("ANNEE"));
+                etu.setGroupe(rset.getInt("GROUPE"));
+
+                // ajoute l'objet dans l'arraylist
+                listEtudiant.add(etu);
+            }
+
+            for (Etudiant etu : listEtudiant)
 
             // Fermeture de l'instruction (liberation des ressources)
             stmt.close();
